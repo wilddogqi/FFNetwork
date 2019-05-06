@@ -8,6 +8,14 @@
 
 #import "FFBaseRequest.h"
 
+#if __has_include(<AFNetworking/AFNetworking.h>)
+#import <AFNetworking/AFNetworking.h>
+#else
+#import "AFNetworking.h"
+#endif
+
+NSString *const FFRequestValidationErrorDomain = @"com.luowenqi.request.validation";
+
 @implementation FFBaseRequest
 
 @end
